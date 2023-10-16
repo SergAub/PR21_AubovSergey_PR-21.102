@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class UserActivity extends AppCompatActivity {
@@ -66,6 +67,7 @@ public class UserActivity extends AppCompatActivity {
         } else {
             db.insert(DatabaseHelper.TABLE, null, cv);
         }
+        Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
         goHome();
     }
     public void delete(View view){
